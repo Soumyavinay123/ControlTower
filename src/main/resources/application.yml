@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: USER-API
+  datasource:
+    url: jdbc:postgresql://localhost:5432/hotel_user
+    username: postgres
+    password: postgres
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+#      format_sql: true
+    show-sql: true
+
+server:
+  port: 8090
+  servlet:
+    context-path: /user-management
+    
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8888/eureka
+  
+  
